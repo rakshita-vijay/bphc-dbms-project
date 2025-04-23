@@ -948,4 +948,4 @@ Call PrintDemo('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CALL DeleteDoctorCascade(1001);
 CALL DeleteCompanyCascade('MediLife Ltd');
 
--- DeletePatientCascade DeletePharmacyCascade
+-- DeletePatientCascade, DeletePharmacyCascade
