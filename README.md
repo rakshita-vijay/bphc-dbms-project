@@ -193,9 +193,9 @@ The repository follows a clean, logical structure that separates design artifact
 ## 10. Getting Started
 
 (1) **Database Setup**: Execute `dbms_project_version_2.sql` in your MySQL environment
-(2) **Sample Data**: The script includes comprehensive sample data for immediate testing
-(3) **Procedure Testing**: Use the included demonstration calls to explore system capabilities
-(4) **Custom Operations**: Extend the system using the established stored procedure patterns
+<br>(2) **Sample Data**: The script includes comprehensive sample data for immediate testing
+<br>(3) **Procedure Testing**: Use the included demonstration calls to explore system capabilities
+<br>(4) **Custom Operations**: Extend the system using the established stored procedure patterns
 
 ---
 
