@@ -4,13 +4,13 @@ A comprehensive **Database Management System** designed for NOVA, a modern pharm
 
 ---
 
-## ⌛ Background
+## 1. Background
 **Built for the Database Systems course (CSF 212) at BITS Pilani Hyderabad Campus**
 This project showcases the practical application of database design principles in creating a real-world healthcare management system that balances complexity with usability.
 
 ---
 
-## 🌟 Project Overview
+## 2. Project Overview
 
 The NOVA Pharmacy Chain Management System serves as the backbone for a network of pharmacies, managing complex relationships between healthcare stakeholders. This isn't just another database project - it's a fully-functional system that could power real pharmacy operations, handling everything from patient prescriptions to pharmaceutical company contracts.
 
@@ -18,7 +18,7 @@ The NOVA Pharmacy Chain Management System serves as the backbone for a network o
 
 ---
 
-## 📁 Repository Structure
+## 3. Repository Structure
 
 ```
 bphc-dbms-project/
@@ -34,52 +34,52 @@ The repository follows a clean, logical structure that separates design artifact
 
 ---
 
-## 🎯 Design Philosophy & Highlights
+## 4. Design Philosophy & Highlights
 
-### **1. Entity-Centric Architecture**
-The system revolves around six core entities that mirror real-world healthcare operations:
+- ### **Entity-Centric Architecture**
+  The system revolves around six core entities that mirror real-world healthcare operations:
+  
+  **👨‍⚕️ Doctor Entity** - Healthcare professionals with specialized expertise
+  - Unique identification through Aadhar ID
+  - Specialization tracking (Cardiology, Neurology, Pediatrics, etc.)
+  - Experience quantification for better patient-doctor matching
+  
+  **🏥 Patient Entity** - The heart of the healthcare system
+  - Comprehensive demographic information
+  - Mandatory primary physician assignment ensuring continuity of care
+  - Address and age tracking for demographic analysis
+  
+  **🏢 Pharmaceutical Company Entity** - Drug manufacturers and suppliers
+  - Company name serves as natural primary key
+  - Contact information for business communications
+  - Foundation for drug supply chain management
+  
+  **💊 Drugs Entity** - Medication catalog with company associations
+  - Composite primary key ensuring trade name uniqueness within companies
+  - Chemical formula storage for pharmaceutical reference
+  - Flexible design allowing same generic drugs from different manufacturers
+  
+  **🏪 Pharmacy Entity** - Physical pharmacy locations
+  - Complete contact and location information
+  - Foundation for inventory and sales management
+  - Contract management capabilities
+  
+  **📋 Prescription Entity** - The critical link between doctors, patients, and medications
+  - Temporal tracking with prescription dates
+  - Support for multiple drugs per prescription
+  - Quantity specification for precise medication management
 
-**👨‍⚕️ Doctor Entity** - Healthcare professionals with specialized expertise
-- Unique identification through Aadhar ID
-- Specialization tracking (Cardiology, Neurology, Pediatrics, etc.)
-- Experience quantification for better patient-doctor matching
+- ### **Relationship Design**
 
-**🏥 Patient Entity** - The heart of the healthcare system
-- Comprehensive demographic information
-- Mandatory primary physician assignment ensuring continuity of care
-- Address and age tracking for demographic analysis
-
-**🏢 Pharmaceutical Company Entity** - Drug manufacturers and suppliers
-- Company name serves as natural primary key
-- Contact information for business communications
-- Foundation for drug supply chain management
-
-**💊 Drugs Entity** - Medication catalog with company associations
-- Composite primary key ensuring trade name uniqueness within companies
-- Chemical formula storage for pharmaceutical reference
-- Flexible design allowing same generic drugs from different manufacturers
-
-**🏪 Pharmacy Entity** - Physical pharmacy locations
-- Complete contact and location information
-- Foundation for inventory and sales management
-- Contract management capabilities
-
-**📋 Prescription Entity** - The critical link between doctors, patients, and medications
-- Temporal tracking with prescription dates
-- Support for multiple drugs per prescription
-- Quantity specification for precise medication management
-
-### **2. Relationship Design**
-
-The system implements sophisticated relationship modeling that captures real-world complexities:
-
-**Primary Physician Relationship** - Every patient has exactly one primary physician, but doctors can serve multiple patients, ensuring accountability while allowing workload distribution.
-
-**Prescription Flexibility** - The many-to-many relationship between prescriptions and drugs is elegantly handled through the `Drug_Presc` junction table, allowing doctors to prescribe multiple medications with specific quantities.
-
-**Pharmacy-Drug Marketplace** - The `Sells` relationship creates a flexible marketplace where the same drug can be sold at different pharmacies with varying prices, reflecting real market dynamics.
-
-**Contract Management** - Pharmaceutical companies and pharmacies are connected through formal contracts with supervisors, dates, and content tracking, enabling proper business relationship management.
+  The system implements sophisticated relationship modeling that captures real-world complexities:
+  
+  **Primary Physician Relationship** - Every patient has exactly one primary physician, but doctors can serve multiple patients, ensuring accountability while allowing workload distribution.
+  
+  **Prescription Flexibility** - The many-to-many relationship between prescriptions and drugs is elegantly handled through the `Drug_Presc` junction table, allowing doctors to prescribe multiple medications with specific quantities.
+  
+  **Pharmacy-Drug Marketplace** - The `Sells` relationship creates a flexible marketplace where the same drug can be sold at different pharmacies with varying prices, reflecting real market dynamics.
+  
+  **Contract Management** - Pharmaceutical companies and pharmacies are connected through formal contracts with supervisors, dates, and content tracking, enabling proper business relationship management.
 
 ---
 
