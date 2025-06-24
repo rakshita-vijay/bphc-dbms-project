@@ -11,6 +11,8 @@
 **Drugs Table:**
 - Trade name uniqueness only within a company (composite key with `CompanyNameDrugs`)  
 
+---
+
 ## **Relationship Cardinalities & Business Rules**
 
 **Patient-Doctor Relationship:**
@@ -25,6 +27,8 @@
 - Assumed the same drug can be sold at multiple pharmacies with different prices 
 - No minimum stock quantity constraints implemented  
 
+---
+
 ## **Implementation Decisions** 
 
 **Deletion Policies:** 
@@ -33,6 +37,8 @@
 
 **Data Validation:**
 - Assumed basic referential integrity through foreign keys is sufficient  
+
+---
 
 ## **Stored Procedure Assumptions**
 
