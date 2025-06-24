@@ -19,9 +19,9 @@ Purpose: Centralized management of pharmacy operations, including patients, doct
 ```
 bphc-dbms-project/
 ├── Diagrams/
-│  ├── er_model.png           # Comprehensive ER diagram
-│  ├── relational_mapping.png # Schema transformation
-│  └── assumptions.md         # Design assumptions and decisions
+│  ├── er_model.png            # Comprehensive ER diagram
+│  ├── relational_mapping.png  # Schema transformation
+│  └── assumptions.md          # Design assumptions and decisions
 ├── dbms_project_version_2.sql # Complete database implementation
 └── README.md                  # Project documentation
 ```
