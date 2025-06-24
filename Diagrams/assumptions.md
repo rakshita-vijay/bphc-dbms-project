@@ -2,7 +2,7 @@
 
 ---
 
-## **Entity Attributes & Data Types** 
+## **1. Entity Attributes & Data Types** 
 
 **Patient Table:**  
 - `Primary_Physician` as mandatory (NOT NULL implied by foreign key) 
@@ -15,7 +15,7 @@
 
 ---
 
-## **Relationship Cardinalities & Business Rules**
+## **2. Relationship Cardinalities & Business Rules**
 
 **Patient-Doctor Relationship:**
 - Assumed every patient must have exactly one primary physician 
@@ -31,7 +31,7 @@
 
 ---
 
-## **Implementation Decisions** 
+## **3. Implementation Decisions** 
 
 **Deletion Policies:** 
 - When deleting a doctor, set `Primary_Physician` to NULL for affected patients 
@@ -42,7 +42,7 @@
 
 ---
 
-## **Stored Procedure Assumptions**
+## **4. Stored Procedure Assumptions**
 
 **Functionality Scope:** 
 - Assumed report generation requires date range filtering 
