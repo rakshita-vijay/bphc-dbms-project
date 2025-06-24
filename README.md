@@ -12,7 +12,7 @@ A comprehensive **Database Management System** designed for NOVA, a modern pharm
 
 ## 2. Project Overview
 
-The NOVA Pharmacy Chain Management System serves as the backbone for a network of pharmacies, managing complex relationships between healthcare stakeholders. This is a fully-functional system that can power real pharmacy operations, handling everything from patient prescriptions to pharmaceutical company contracts.
+The NOVA Pharmacy Chain Management System serves as the backbone for a network of pharmacies, managing complex relationships between healthcare stakeholders. This is a fully-functional system that can handle everything from patient prescriptions to pharmaceutical company contracts.
 
 **Technology Stack:** MySQL with advanced PL/SQL stored procedures and functions
 
@@ -77,7 +77,7 @@ The repository follows a clean, logical structure that separates design artifact
   
   - **Prescription Flexibility** - The many-to-many relationship between prescriptions and drugs is elegantly handled through the `Drug_Presc` junction table, allowing doctors to prescribe multiple medications with specific quantities.
   
-  - **Pharmacy-Drug Marketplace** - The `Sells` relationship creates a flexible marketplace where the same drug can be sold at different pharmacies with varying prices, reflecting real market dynamics.
+  - **Pharmacy-Drug Marketplace** - The `Sells` relationship creates a flexible marketplace where the same drug can be sold at different pharmacies with varying prices, reflecting actual market dynamics.
   
   - **Contract Management** - Pharmaceutical companies and pharmacies are connected through formal contracts with supervisors, dates, and content tracking, enabling proper business relationship management.
 
