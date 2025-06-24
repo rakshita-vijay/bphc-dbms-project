@@ -6,7 +6,7 @@ A database management system for a pharmacy chain, handling prescriptions, inven
 
 ## 1. Overview
 
-- Purpose: Centralized management of pharmacy operations, including patients, doctors, drugs, pharmacies, pharmaceutical companies, and prescriptions.
+Purpose: Centralized management of pharmacy operations, including patients, doctors, drugs, pharmacies, pharmaceutical companies, and prescriptions.
   - Supports efficient data storage, querying, and reporting for real-world pharmacy workflows.
   - Designed for scalability and maintainability.
   - Serves as the backbone for a network of pharmacies, managing complex relationships between healthcare stakeholders.
