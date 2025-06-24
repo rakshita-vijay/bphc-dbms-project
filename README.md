@@ -5,7 +5,7 @@ A comprehensive **Database Management System** designed for NOVA, a modern pharm
 ---
 
 ## 1. Background
-**Built for the Database Systems course (CSF 212) at BITS Pilani Hyderabad Campus**
+**Built for the Database Systems course (CS F212) at BITS Pilani Hyderabad Campus**
 <br>This project showcases the practical application of database design principles in creating a real-world healthcare management system that balances complexity with usability.
 
 ---
@@ -39,163 +39,163 @@ The repository follows a clean, logical structure that separates design artifact
 - ### **Entity-Centric Architecture**
   The system revolves around six core entities that mirror real-world healthcare operations:
   
-  **👨‍⚕️ Doctor Entity** - Healthcare professionals with specialized expertise
-  - Unique identification through Aadhar ID
-  - Specialization tracking (Cardiology, Neurology, Pediatrics, etc.)
-  - Experience quantification for better patient-doctor matching
+  - **👨‍⚕️ Doctor Entity** - Healthcare professionals with specialized expertise
+    - Unique identification through Aadhar ID
+    - Specialization tracking (Cardiology, Neurology, Pediatrics, etc.)
+    - Experience quantification for better patient-doctor matching
   
-  **🏥 Patient Entity** - The heart of the healthcare system
-  - Comprehensive demographic information
-  - Mandatory primary physician assignment ensuring continuity of care
-  - Address and age tracking for demographic analysis
+  - **🏥 Patient Entity** - The heart of the healthcare system
+    - Comprehensive demographic information
+    - Mandatory primary physician assignment ensuring continuity of care
+    - Address and age tracking for demographic analysis
   
-  **🏢 Pharmaceutical Company Entity** - Drug manufacturers and suppliers
-  - Company name serves as natural primary key
-  - Contact information for business communications
-  - Foundation for drug supply chain management
+  - **🏢 Pharmaceutical Company Entity** - Drug manufacturers and suppliers
+    - Company name serves as natural primary key
+    - Contact information for business communications
+    - Foundation for drug supply chain management
   
-  **💊 Drugs Entity** - Medication catalog with company associations
-  - Composite primary key ensuring trade name uniqueness within companies
-  - Chemical formula storage for pharmaceutical reference
-  - Flexible design allowing same generic drugs from different manufacturers
+  - **💊 Drugs Entity** - Medication catalog with company associations
+    - Composite primary key ensuring trade name uniqueness within companies
+    - Chemical formula storage for pharmaceutical reference
+    - Flexible design allowing same generic drugs from different manufacturers
   
-  **🏪 Pharmacy Entity** - Physical pharmacy locations
-  - Complete contact and location information
-  - Foundation for inventory and sales management
-  - Contract management capabilities
+  - **🏪 Pharmacy Entity** - Physical pharmacy locations
+    - Complete contact and location information
+    - Foundation for inventory and sales management
+    - Contract management capabilities
   
-  **📋 Prescription Entity** - The critical link between doctors, patients, and medications
-  - Temporal tracking with prescription dates
-  - Support for multiple drugs per prescription
-  - Quantity specification for precise medication management
+  - **📋 Prescription Entity** - The critical link between doctors, patients, and medications
+    - Temporal tracking with prescription dates
+    - Support for multiple drugs per prescription
+    - Quantity specification for precise medication management
 
 - ### **Relationship Design**
 
   The system implements sophisticated relationship modeling that captures real-world complexities:
   
-  **Primary Physician Relationship** - Every patient has exactly one primary physician, but doctors can serve multiple patients, ensuring accountability while allowing workload distribution.
+  - **Primary Physician Relationship** - Every patient has exactly one primary physician, but doctors can serve multiple patients, ensuring accountability while allowing workload distribution.
   
-  **Prescription Flexibility** - The many-to-many relationship between prescriptions and drugs is elegantly handled through the `Drug_Presc` junction table, allowing doctors to prescribe multiple medications with specific quantities.
+  - **Prescription Flexibility** - The many-to-many relationship between prescriptions and drugs is elegantly handled through the `Drug_Presc` junction table, allowing doctors to prescribe multiple medications with specific quantities.
   
-  **Pharmacy-Drug Marketplace** - The `Sells` relationship creates a flexible marketplace where the same drug can be sold at different pharmacies with varying prices, reflecting real market dynamics.
+  - **Pharmacy-Drug Marketplace** - The `Sells` relationship creates a flexible marketplace where the same drug can be sold at different pharmacies with varying prices, reflecting real market dynamics.
   
-  **Contract Management** - Pharmaceutical companies and pharmacies are connected through formal contracts with supervisors, dates, and content tracking, enabling proper business relationship management.
+  - **Contract Management** - Pharmaceutical companies and pharmacies are connected through formal contracts with supervisors, dates, and content tracking, enabling proper business relationship management.
 
 ---
 
 ## 5. Schema Formation & Structure
 
-### **1. Normalization**
-The database achieves **Third Normal Form (3NF)** through careful decomposition:
+- ### **Normalization**
+  The database achieves **Third Normal Form (3NF)** through careful decomposition:
+  
+  - **First Normal Form**: All attributes contain atomic values
+  - **Second Normal Form**: Elimination of partial dependencies through proper primary key design
+  - **Third Normal Form**: Removal of transitive dependencies, particularly in the prescription-drug relationship
 
-- **First Normal Form**: All attributes contain atomic values
-- **Second Normal Form**: Elimination of partial dependencies through proper primary key design
-- **Third Normal Form**: Removal of transitive dependencies, particularly in the prescription-drug relationship
+- ### **Primary Key Strategy**
+  The system employs both simple and composite primary keys strategically:
+  - **Simple Keys**: Natural identifiers like Aadhar IDs and company names
+  - **Composite Keys**: Complex relationships like `(Doctor, Patient, PrescriptionDate)` ensuring temporal uniqueness
 
-### **2. Primary Key Strategy**
-The system employs both simple and composite primary keys strategically:
-- **Simple Keys**: Natural identifiers like Aadhar IDs and company names
-- **Composite Keys**: Complex relationships like `(Doctor, Patient, PrescriptionDate)` ensuring temporal uniqueness
-
-### **3. Foreign Key Integrity**
-Comprehensive referential integrity through carefully designed foreign key constraints that maintain data consistency while allowing business flexibility.
+- ### **Foreign Key Integrity**
+  Comprehensive referential integrity through carefully designed foreign key constraints that maintain data consistency while allowing business flexibility.
 
 ---
 
 ## 6. Functionalities & Features
 
-### **1. Core CRUD Operations**
-Every entity supports full **Create, Read, Update, Delete** operations through dedicated stored procedures:
+- ### **Core CRUD Operations**
+  Every entity supports full **Create, Read, Update, Delete** operations through dedicated stored procedures:
+  
+  ```sql
+  -- Example: Adding a new doctor with validation
+  CALL AddDoctor(1001, 'Dr. Meera Rao', 'Cardiology', 15);
+  ```
 
-```sql
--- Example: Adding a new doctor with validation
-CALL AddDoctor(1001, 'Dr. Meera Rao', 'Cardiology', 15);
-```
+- ### **Advanced Query Capabilities**
 
-### **2. Advanced Query Capabilities**
+  - **📊 Prescription Analytics**
+    - `GetPrescriptionReport()`: Generate comprehensive prescription reports for patients within date ranges
+    - `GetPrescriptionDetails()`: Retrieve specific prescription information for a given patient and date
+  
+  - **🏥 Inventory Management**
+    - `GetPharmacyStock()`: Complete inventory listing with supplier and pricing information
+    - Real-time stock position tracking across multiple pharmacy locations
+  
+  - **👥 Relationship Queries**
+    - `GetPatientsForDoctor()`: Patient roster management for healthcare professionals
+    - `GetPharmacyCompanyContact()`: Business relationship and contact information retrieval
 
-**📊 Prescription Analytics**
-- `GetPrescriptionReport()`: Generate comprehensive prescription reports for patients within date ranges
-- `GetPrescriptionDetails()`: Retrieve specific prescription information for a given patient and date
+- ### **Business Intelligence Features**
 
-**🏥 Inventory Management**
-- `GetPharmacyStock()`: Complete inventory listing with supplier and pricing information
-- Real-time stock position tracking across multiple pharmacy locations
-
-**👥 Relationship Queries**
-- `GetPatientsForDoctor()`: Patient roster management for healthcare professionals
-- `GetPharmacyCompanyContact()`: Business relationship and contact information retrieval
-
-### **3. Business Intelligence Features**
-
-**Drug Analysis by Company**: Complete pharmaceutical portfolio analysis showing all medications produced by specific manufacturers, essential for procurement and partnership decisions.
-
-**Contact Management System**: Integrated communication system linking pharmacies with their pharmaceutical partners, including supervisor assignments and contract details.
+  - **Drug Analysis by Company**: Complete pharmaceutical portfolio analysis showing all medications produced by specific manufacturers, essential for procurement and partnership decisions.
+  
+  - **Contact Management System**: Integrated communication system linking pharmacies with their pharmaceutical partners, including supervisor assignments and contract details.
 
 ---
 
 ## 7. System Flexibility & Adaptability
 
-### **1. Scalable Architecture**
-The system design anticipates growth through:
-- **Modular stored procedures** that can be easily extended
-- **Flexible pricing models** allowing dynamic market adjustments
-- **Expandable entity attributes** without breaking existing relationships
+- ### **Scalable Architecture**
+  The system design anticipates growth through:
+  - **Modular stored procedures** that can be easily extended
+  - **Flexible pricing models** allowing dynamic market adjustments
+  - **Expandable entity attributes** without breaking existing relationships
 
-### **2. Business Rule Accommodation**
-The system gracefully handles complex business scenarios:
-- **Multiple prescriptions per patient-doctor pair** on different dates
-- **Supervisor reassignment** for pharmaceutical contracts
-- **Cascade deletion policies** that maintain referential integrity while providing cleanup flexibility
+- ### **Business Rule Accommodation**
+  The system gracefully handles complex business scenarios:
+  - **Multiple prescriptions per patient-doctor pair** on different dates
+  - **Supervisor reassignment** for pharmaceutical contracts
+  - **Cascade deletion policies** that maintain referential integrity while providing cleanup flexibility
 
-### **3. Data Validation Framework**
-Multi-layered validation through:
-- **Database constraints** ensuring data integrity at the storage level
-- **Stored procedure validation** providing business logic enforcement
-- **Referential integrity** maintaining relationship consistency
+- ### **Data Validation Framework**
+  Multi-layered validation through:
+  - **Database constraints** ensuring data integrity at the storage level
+  - **Stored procedure validation** providing business logic enforcement
+  - **Referential integrity** maintaining relationship consistency
 
 ---
 
 ## 8. Technical Implementation Details
 
-### **1. Stored Procedure Architecture**
-The system employs over 25 specialized stored procedures, each designed for specific operations:
+- ### **Stored Procedure Architecture**
+  The system employs over 25 specialized stored procedures, each designed for specific operations:
+  
+  - **Cascade Deletion Management**: Advanced procedures like `DeleteDoctorCascade()` that intelligently handle complex deletion scenarios while preserving data integrity.
+  
+  - **Report Generation Engine**: Sophisticated reporting procedures that join multiple tables and provide formatted output for business intelligence.
+  
+  - **Update Flexibility**: Granular update procedures allowing modification of specific attributes without affecting unrelated data.
 
-**Cascade Deletion Management**: Advanced procedures like `DeleteDoctorCascade()` that intelligently handle complex deletion scenarios while preserving data integrity.
-
-**Report Generation Engine**: Sophisticated reporting procedures that join multiple tables and provide formatted output for business intelligence.
-
-**Update Flexibility**: Granular update procedures allowing modification of specific attributes without affecting unrelated data.
-
-### **2. Sample Data Integration**
-The system includes realistic sample data covering:
-- **8 specialized doctors** across various medical fields
-- **26 patients** with diverse demographics
-- **9 pharmaceutical companies** with comprehensive drug portfolios
-- **8 pharmacy locations** across major Indian cities
-- **Real-world drug formulations** and pricing structures
+- ### **Sample Data Integration**
+  The system includes realistic sample data covering:
+  - **8 specialized doctors** across various medical fields
+  - **26 patients** with diverse demographics
+  - **9 pharmaceutical companies** with comprehensive drug portfolios
+  - **8 pharmacy locations** across major Indian cities
+  - **Real-world drug formulations** and pricing structures
 
 ---
 
 ## 9. Innovation & Best Practices
 
-### **1. Assumption-Driven Design**
-The project documentation includes a comprehensive assumptions file that explains design decisions, making the system transparent and maintainable. Key assumptions include simplified Aadhar ID formats for demonstration purposes while maintaining real-world applicability.
+- ### **Assumption-Driven Design**
+  The project documentation includes a comprehensive assumptions file that explains design decisions, making the system transparent and maintainable. Key assumptions include simplified Aadhar ID formats for demonstration purposes while maintaining real-world applicability.
 
-### **2. Error Handling Strategy**
-Robust error handling through database constraints and stored procedure validation, ensuring system stability under various operational conditions.
+- ### **Error Handling Strategy**
+  Robust error handling through database constraints and stored procedure validation, ensuring system stability under various operational conditions.
 
-### **3. Performance Optimization**
-Strategic indexing through primary and foreign key relationships, ensuring efficient query execution even with large datasets.
+- ### **Performance Optimization**
+  Strategic indexing through primary and foreign key relationships, ensuring efficient query execution even with large datasets.
 
 ---
 
 ## 10. Getting Started
 
-1. **Database Setup**: Execute `dbms_project_version_2.sql` in your MySQL environment
-2. **Sample Data**: The script includes comprehensive sample data for immediate testing
-3. **Procedure Testing**: Use the included demonstration calls to explore system capabilities
-4. **Custom Operations**: Extend the system using the established stored procedure patterns
+(1) **Database Setup**: Execute `dbms_project_version_2.sql` in your MySQL environment
+(2) **Sample Data**: The script includes comprehensive sample data for immediate testing
+(3) **Procedure Testing**: Use the included demonstration calls to explore system capabilities
+(4) **Custom Operations**: Extend the system using the established stored procedure patterns
 
 ---
 
