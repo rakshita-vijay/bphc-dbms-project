@@ -12,7 +12,7 @@ A comprehensive **Database Management System** designed for NOVA, a modern pharm
 
 ## 2. Project Overview
 
-The NOVA Pharmacy Chain Management System serves as the backbone for a network of pharmacies, managing complex relationships between healthcare stakeholders. This isn't just another database project - it's a fully-functional system that could power real pharmacy operations, handling everything from patient prescriptions to pharmaceutical company contracts.
+The NOVA Pharmacy Chain Management System serves as the backbone for a network of pharmacies, managing complex relationships between healthcare stakeholders. This is a fully-functional system that can power real pharmacy operations, handling everything from patient prescriptions to pharmaceutical company contracts.
 
 **Technology Stack:** MySQL with advanced PL/SQL stored procedures and functions
 
