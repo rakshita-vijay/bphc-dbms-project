@@ -32,26 +32,26 @@ The repository follows a clean, logical structure that separates design artifact
 
 ## 3. Design Highlights
 
-- **Key entities and relationships:**
-  - **Entities:**
-    - Doctor: Identified by Aadhar ID, includes name, specialty, and experience.
-      - Healthcare professionals with specialized expertise.
-    - Patient: Includes demographic details, address, and assigned primary physician.
-      - Mandatory primary physician assignment ensuring continuity of care.
-    - Pharmaceutical Company: Identified by company name, includes contact info.
-      - Drug manufacturers and suppliers forming the supply chain backbone.
-    - Drug: Linked to a company, includes trade name, formula, and price.
-      - Composite primary key ensuring trade name uniqueness within companies.
-      - Supports multiple manufacturers for the same generic drug.
-    - Pharmacy: Location and contact details.
-      - Physical pharmacy locations with inventory and contract management capabilities.
-    - Prescription: Connects patient, doctor, and multiple drugs with quantities.
-      - Supports multiple drugs per prescription with quantity specification.
-  - **Relationships:**
-    - Each patient has one primary physician; doctors can serve multiple patients.
-    - Prescriptions can include multiple drugs, modeled via a junction table.
-    - Pharmacies stock various drugs with price and quantity details.
-    - Contracts link pharmacies and pharmaceutical companies, including supervisors and contract periods.
+**Key entities and relationships:**
+- **Entities:**
+  - Doctor: Identified by Aadhar ID, includes name, specialty, and experience.
+    - Healthcare professionals with specialized expertise.
+  - Patient: Includes demographic details, address, and assigned primary physician.
+    - Mandatory primary physician assignment ensuring continuity of care.
+  - Pharmaceutical Company: Identified by company name, includes contact info.
+    - Drug manufacturers and suppliers forming the supply chain backbone.
+  - Drug: Linked to a company, includes trade name, formula, and price.
+    - Composite primary key ensuring trade name uniqueness within companies.
+    - Supports multiple manufacturers for the same generic drug.
+  - Pharmacy: Location and contact details.
+    - Physical pharmacy locations with inventory and contract management capabilities.
+  - Prescription: Connects patient, doctor, and multiple drugs with quantities.
+    - Supports multiple drugs per prescription with quantity specification.
+- **Relationships:**
+  - Each patient has one primary physician; doctors can serve multiple patients.
+  - Prescriptions can include multiple drugs, modeled via a junction table.
+  - Pharmacies stock various drugs with price and quantity details.
+  - Contracts link pharmacies and pharmaceutical companies, including supervisors and contract periods.
 
 ---
 
