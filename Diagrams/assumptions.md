@@ -1,6 +1,6 @@
-## **Database Design Assumptions**
+# **Database Design Assumptions**
 
-### **Entity Attributes & Data Types** 
+## **Entity Attributes & Data Types** 
 
 **Patient Table:**  
 - `Primary_Physician` as mandatory (NOT NULL implied by foreign key) 
@@ -11,7 +11,7 @@
 **Drugs Table:**
 - Trade name uniqueness only within a company (composite key with `CompanyNameDrugs`)  
 
-### **Relationship Cardinalities & Business Rules**
+## **Relationship Cardinalities & Business Rules**
 
 **Patient-Doctor Relationship:**
 - Assumed every patient must have exactly one primary physician 
@@ -25,7 +25,7 @@
 - Assumed the same drug can be sold at multiple pharmacies with different prices 
 - No minimum stock quantity constraints implemented  
 
-### **Implementation Decisions** 
+## **Implementation Decisions** 
 
 **Deletion Policies:** 
 - When deleting a doctor, set `Primary_Physician` to NULL for affected patients 
@@ -34,7 +34,7 @@
 **Data Validation:**
 - Assumed basic referential integrity through foreign keys is sufficient  
 
-### **Stored Procedure Assumptions**
+## **Stored Procedure Assumptions**
 
 **Functionality Scope:** 
-- Assumed report generation requires date range filtering  
+- Assumed report generation requires date range filtering 
