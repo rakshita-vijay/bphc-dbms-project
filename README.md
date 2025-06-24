@@ -130,7 +130,7 @@ The repository follows a clean, logical structure that separates design artifact
 ## 10. Additional Information
 
 - Key design assumptions and rationale are documented in `Diagrams/assumptions.md`.
-- Developed as part of the Database Systems course (CSF 212) at BITS Pilani Hyderabad Campus.
+- Developed as part of the Database Systems course (CS F212) at BITS Pilani Hyderabad Campus.
 - Serves as an educational resource demonstrating advanced ER modeling, normalization, and stored procedure development.
 
 ---
