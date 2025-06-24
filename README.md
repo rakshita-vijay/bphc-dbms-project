@@ -6,7 +6,7 @@ A comprehensive **Database Management System** designed for NOVA, a modern pharm
 
 ## 1. Background
 **Built for the Database Systems course (CSF 212) at BITS Pilani Hyderabad Campus**
-This project showcases the practical application of database design principles in creating a real-world healthcare management system that balances complexity with usability.
+<br>This project showcases the practical application of database design principles in creating a real-world healthcare management system that balances complexity with usability.
 
 ---
 
@@ -83,7 +83,7 @@ The repository follows a clean, logical structure that separates design artifact
 
 ---
 
-## 🏗️ Schema Formation & Structure
+## 5. Schema Formation & Structure
 
 ### **1. Normalization**
 The database achieves **Third Normal Form (3NF)** through careful decomposition:
@@ -102,7 +102,7 @@ Comprehensive referential integrity through carefully designed foreign key const
 
 ---
 
-## ⚙️ Functionalities & Features
+## 6. Functionalities & Features
 
 ### **1. Core CRUD Operations**
 Every entity supports full **Create, Read, Update, Delete** operations through dedicated stored procedures:
@@ -134,7 +134,7 @@ CALL AddDoctor(1001, 'Dr. Meera Rao', 'Cardiology', 15);
 
 ---
 
-## 🔄 System Flexibility & Adaptability
+## 7. System Flexibility & Adaptability
 
 ### **1. Scalable Architecture**
 The system design anticipates growth through:
@@ -156,7 +156,7 @@ Multi-layered validation through:
 
 ---
 
-## 🛠️ Technical Implementation Details
+## 8. Technical Implementation Details
 
 ### **1. Stored Procedure Architecture**
 The system employs over 25 specialized stored procedures, each designed for specific operations:
@@ -177,7 +177,7 @@ The system includes realistic sample data covering:
 
 ---
 
-## 💡 Innovation & Best Practices
+## 9. Innovation & Best Practices
 
 ### **1. Assumption-Driven Design**
 The project documentation includes a comprehensive assumptions file that explains design decisions, making the system transparent and maintainable. Key assumptions include simplified Aadhar ID formats for demonstration purposes while maintaining real-world applicability.
@@ -190,7 +190,7 @@ Strategic indexing through primary and foreign key relationships, ensuring effic
 
 ---
 
-## 🚀 Getting Started
+## 10. Getting Started
 
 1. **Database Setup**: Execute `dbms_project_version_2.sql` in your MySQL environment
 2. **Sample Data**: The script includes comprehensive sample data for immediate testing
@@ -199,7 +199,7 @@ Strategic indexing through primary and foreign key relationships, ensuring effic
 
 ---
 
-## 🎓 Educational Value
+## 11. Educational Value
 
 This project serves as an excellent educational resource demonstrating:
 - **Advanced ER modeling** with complex relationships
