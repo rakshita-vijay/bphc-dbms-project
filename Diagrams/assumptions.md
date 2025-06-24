@@ -1,5 +1,7 @@
 # **Database Design Assumptions**
 
+---
+
 ## **Entity Attributes & Data Types** 
 
 **Patient Table:**  
