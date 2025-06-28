@@ -141,7 +141,7 @@ The repository follows a clean, logical structure that separates design artifact
 
 ## 11. Link
 
-[1] [Lucid Chart] (https://lucid.app/lucidchart/8f2aad56-9d24-4836-b9a5-46070a6cbc00/edit?view_items=k3i0MiOuP6ec%2Ck3i0ZLXGxG1p%2Ck3i0nk-OH3o5%2Ck3i0nXzTaQfC%2Ck3i00RGtV14f%2Ck3i0ayU0JrD-%2Ck3i02c-BcQaJ%2Ck3i0XO9bFJe.%2Ck3i0XF07tCLH%2Ck3i0jUj928DP%2Ck3i0yAQBnUdd%2Ck3i0KWr01qKf%2Ck3i01r~eAixR%2Ck3i0r0VwTsOy%2Ck3i0EPEUts4Z%2Ck3i0k-7Q~m0x%2Ck3i0n5rXLDVQ%2Ck3i0a-~Ahl6f%2Ck3i0GO19sp2H%2Ck3i0EXLGB~e_%2Ck3i0m0tuxQ1j%2Ck3i0vhm5HbZN%2Ck3i06_070eLq%2Ck3i0dVJayrcR%2Ck3i06XSJVvzI%2Ck3i0BcwPepUW%2Ck3i0r1LfAYWR&invitationId=inv_56c1378e-6109-48e2-b142-6b909e73f94b)
+[1] ([Lucid Chart] (https://lucid.app/lucidchart/8f2aad56-9d24-4836-b9a5-46070a6cbc00/edit?view_items=k3i0MiOuP6ec%2Ck3i0ZLXGxG1p%2Ck3i0nk-OH3o5%2Ck3i0nXzTaQfC%2Ck3i00RGtV14f%2Ck3i0ayU0JrD-%2Ck3i02c-BcQaJ%2Ck3i0XO9bFJe.%2Ck3i0XF07tCLH%2Ck3i0jUj928DP%2Ck3i0yAQBnUdd%2Ck3i0KWr01qKf%2Ck3i01r~eAixR%2Ck3i0r0VwTsOy%2Ck3i0EPEUts4Z%2Ck3i0k-7Q~m0x%2Ck3i0n5rXLDVQ%2Ck3i0a-~Ahl6f%2Ck3i0GO19sp2H%2Ck3i0EXLGB~e_%2Ck3i0m0tuxQ1j%2Ck3i0vhm5HbZN%2Ck3i06_070eLq%2Ck3i0dVJayrcR%2Ck3i06XSJVvzI%2Ck3i0BcwPepUW%2Ck3i0r1LfAYWR&invitationId=inv_56c1378e-6109-48e2-b142-6b909e73f94b))
 
 ---
 
