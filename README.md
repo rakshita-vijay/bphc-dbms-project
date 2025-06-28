@@ -73,11 +73,11 @@ The repository follows a clean, logical structure that separates design artifact
 
 - Core operations:
   - CRUD (Create, Read, Update, Delete) for all entities via stored procedures.
-  - Advanced query capabilities:
-    - Prescription analytics: Generate reports for patients within date ranges.
-    - Inventory management: Real-time stock tracking across pharmacies.
-    - Relationship queries: List patients per doctor, retrieve pharmacy-company contacts.
-  - Cascade deletion procedures maintain data integrity when deleting related records.
+- Advanced query capabilities:
+  - Prescription analytics: Generate reports for patients within date ranges.
+  - Inventory management: Real-time stock tracking across pharmacies.
+  - Relationship queries: List patients per doctor, retrieve pharmacy-company contacts.
+- Cascade deletion procedures maintain data integrity when deleting related records.
 
 ---
 
